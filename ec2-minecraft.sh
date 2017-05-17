@@ -1,11 +1,10 @@
 #!/bin/bash
-# this is for the Amazon Linux AMI. Note that port 25565 must be added to the security group used.
+# This is for the Amazon Linux AMI. Note that port 25565 must be added to the security group used.
 #
-# instructions copied from http://tsmonaghan.com/set-minecraft-server-aws-cloud-complete-guide-87
-# to use, put this in the "user data" field when creating a new EC2 instance:
-# curl https://raw.githubusercontent.com/robu/ec2-startup-scripts/master/ec2-minecraft.sh | bash
+# Instructions copied from http://tsmonaghan.com/set-minecraft-server-aws-cloud-complete-guide-87
+# to use, paste this entire script into the "user data" field when creating a new EC2 instance.
 #
-# to access the server console when running, log into the EC2 instance and run "screen -r"
+# To access the server console when running, log into the EC2 instance and run "screen -r".
 
 sudo yum update -y
 mkdir minecraft
