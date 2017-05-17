@@ -4,6 +4,8 @@
 # instructions copied from http://tsmonaghan.com/set-minecraft-server-aws-cloud-complete-guide-87
 # to use, put this in the "user data" field when creating a new EC2 instance:
 # curl https://raw.githubusercontent.com/robu/ec2-startup-scripts/master/ec2-minecraft.sh | bash
+#
+# to access the server console when running, log into the EC2 instance and run "screen -r"
 
 sudo yum update -y
 mkdir minecraft
@@ -12,7 +14,7 @@ wget `curl https://minecraft.net/en-us/download/server | sed -n 's/.*href="\([^"
 ln -s mine* minecraft_server.jar
 
 # this will return an error, but also create the eula.txt that we need to change:
-sudo java -Xmx1024M -jar minecraft_server.jar nogui
+sudo java -Xmx1024M -jar minecraft_server.jar nogui || true
 
 sudo chmod a+rw eula.txt
 echo "eula=true" > eula.txt
