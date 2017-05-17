@@ -10,11 +10,8 @@
 sudo yum update -y
 mkdir minecraft
 cd minecraft
-wget `curl https://minecraft.net/en-us/download/server | sed -n 's/.*href="\([^"]*\).*/\1/p' | grep https://s3.amazonaws.com/Minecraft.Download`
+curl -O `curl https://minecraft.net/en-us/download/server | sed -n 's/.*href="\([^"]*\).*/\1/p' | grep https://s3.amazonaws.com/Minecraft.Download`
 ln -s mine* minecraft_server.jar
-
-# this will return an error, but also create the eula.txt that we need to change:
-java -Xmx1024M -jar minecraft_server.jar nogui || true
 
 echo "eula=true" > eula.txt
 
