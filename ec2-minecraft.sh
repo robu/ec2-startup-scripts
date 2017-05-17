@@ -18,4 +18,4 @@ java -Xmx1024M -jar minecraft_server.jar nogui || true
 
 echo "eula=true" > eula.txt
 
-screen java -Xmx1024M -jar minecraft_server.jar nogui
+screen -S minecraft -d -m java -Xmx1024M -jar minecraft_server.jar nogui
