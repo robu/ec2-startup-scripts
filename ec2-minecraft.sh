@@ -14,10 +14,8 @@ wget `curl https://minecraft.net/en-us/download/server | sed -n 's/.*href="\([^"
 ln -s mine* minecraft_server.jar
 
 # this will return an error, but also create the eula.txt that we need to change:
-sudo java -Xmx1024M -jar minecraft_server.jar nogui || true
+java -Xmx1024M -jar minecraft_server.jar nogui || true
 
-sudo chmod a+rw eula.txt
 echo "eula=true" > eula.txt
-sudo chmod go-w eula.txt
 
-screen sudo java -Xmx1024M -jar minecraft_server.jar nogui
+screen java -Xmx1024M -jar minecraft_server.jar nogui
