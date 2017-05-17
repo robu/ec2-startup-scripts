@@ -1,6 +1,7 @@
 #!/bin/bash
 # this is for the Amazon Linux AMI. Note that port 25565 must be added to the security group used.
 #
+# instructions copied from http://tsmonaghan.com/set-minecraft-server-aws-cloud-complete-guide-87
 
 yum update -y
 mkdir minecraft
