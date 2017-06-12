@@ -1,5 +1,5 @@
 #!/bin/bash
-# This is sets up a Minecraft server (latest downloadable version) for the Amazon Linux AMI. 
+# This sets up a Minecraft server (latest downloadable version) for the Amazon Linux AMI. 
 # Note that port 25565 must be added to the security group used.
 #
 # Instructions copied from http://tsmonaghan.com/set-minecraft-server-aws-cloud-complete-guide-87
