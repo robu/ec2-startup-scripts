@@ -1,4 +1,7 @@
 #!/bin/bash
+# This installs a nextcloud server on an ubuntu EC2 instance.
+#
+# This is the simplest installation version, with local storage and local sqlite db.
 
 sudo apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -yq
