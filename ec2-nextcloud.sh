@@ -6,6 +6,8 @@
 
 # simple log file ends up in /home/ubuntu/nextcloud-install.log
 
+## TODO: S3 storage, TLS certificate generation/installation
+
 echo "$(date) NEXTCLOUD INSTALLATION START" > /home/ubuntu/nextcloud-install.log
 echo "$(date) OS update and upgrade" >> /home/ubuntu/nextcloud-install.log
 sudo apt-get update
@@ -57,3 +59,4 @@ sudo -u www-data php occ config:system:set trusted_domains 1 --value=$MYIP
 
 echo "$(date) NEXTCLOUD INSTALLATION COMPLETE" >> /home/ubuntu/nextcloud-install.log
 echo "$(date) Visit http://$MYIP/nextcloud to use the web interface" >> /home/ubuntu/nextcloud-install.log
+echo "$(date) Feel free to remove this logfile now" >> /home/ubuntu/nextcloud-install.log
