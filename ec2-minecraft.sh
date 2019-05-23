@@ -13,8 +13,7 @@ cd minecraft
 
 # Checks the Minecraft download page and extracts the link to the latest version, and downloads that
 curl -O `curl https://www.minecraft.net/en-us/download/server | sed -n 's/.*href="\([^"]*\).*/\1/p' | grep launcher.mojang.com`
-ln -s mine* minecraft_server.jar
 
 echo "eula=true" > eula.txt
 
-screen -S minecraft -d -m java -Xmx1024M -jar minecraft_server.jar nogui
+screen -S minecraft -d -m java -Xmx1024M -jar server.jar nogui
