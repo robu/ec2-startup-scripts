@@ -1,5 +1,5 @@
 #!/bin/bash
-# This sets up a Minecraft server (latest downloadable version) for the Amazon Linux AMI. 
+# This sets up a Minecraft server (latest downloadable version) for the Amazon Linux AMI.
 # Note that port 25565 must be added to the security group used.
 #
 # Instructions copied from http://tsmonaghan.com/set-minecraft-server-aws-cloud-complete-guide-87
@@ -12,7 +12,7 @@ mkdir minecraft
 cd minecraft
 
 # Checks the Minecraft download page and extracts the link to the latest version, and downloads that
-curl -O `curl https://minecraft.net/en-us/download/server | sed -n 's/.*href="\([^"]*\).*/\1/p' | grep https://s3.amazonaws.com/Minecraft.Download`
+curl -O `curl https://www.minecraft.net/en-us/download/server | sed -n 's/.*href="\([^"]*\).*/\1/p' | grep launcher.mojang.com`
 ln -s mine* minecraft_server.jar
 
 echo "eula=true" > eula.txt
